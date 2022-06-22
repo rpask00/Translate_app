@@ -1,0 +1,15 @@
+img {
+    height: 29vh;
+}
+
+.segmentBTN:nth-child(2).segment-button-checked {
+    color: var(--ion-color-success);
+}
+
+.segmentBTN:nth-child(3).segment-button-checked {
+    color:  var(--ion-color-danger);
+}
+
+.segmentBTN:nth-child(4).segment-button-checked {
+    color:  var(--ion-color-warning);
+}

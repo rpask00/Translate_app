@@ -1,0 +1,28 @@
+<div >
+  <ion-item-sliding #slidingItem>
+
+    <ion-item>
+
+      <ion-avatar class='flag'>
+        <img src="https://loniow.pl/wp-content/uploads/2018/04/flaga-Polski.jpeg">
+      </ion-avatar>
+
+      <div class="text">
+        <div class="lg">{{wordSupply.pl}}</div>
+        <div>
+          <ion-icon name="code"></ion-icon>
+        </div>
+        <div class="lg"> {{wordSupply.eng}}</div>
+      </div>
+      <ion-avatar class='flag'>
+        <img src="https://cdn.pixabay.com/photo/2016/01/11/17/04/usa-flag-1133963_960_720.jpg">
+      </ion-avatar>
+
+    </ion-item>
+
+    <word-options [slidingItem]='slidingItem' [wordSupply]='wordSupply'></word-options>
+
+  </ion-item-sliding>
+
+</div>
+

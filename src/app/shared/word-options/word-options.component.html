@@ -1,0 +1,20 @@
+<!-- left-side options -->
+
+<ion-item-options side="end">
+  <ion-item-option (click)='move("easy")' color="success">
+    <ion-icon name="medkit" slot="icon-only"></ion-icon>
+  </ion-item-option>
+  <ion-item-option (click)='move("medium")' color="warning">
+    <ion-icon name="medal" slot="icon-only"></ion-icon>
+  </ion-item-option>
+  <ion-item-option (click)='move("hard")' color="danger">
+    <ion-icon name="nuclear" slot="icon-only"></ion-icon>
+  </ion-item-option>
+</ion-item-options>
+<!-- right-side options -->
+
+<ion-item-options side="start">
+  <ion-item-option (click)='remove()' color="black" side='start'>
+    <ion-icon name="trash" slot="icon-only"></ion-icon>
+  </ion-item-option>
+</ion-item-options>

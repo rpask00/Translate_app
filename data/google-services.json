@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "986733453212",
+    "firebase_url": "https://e-zsat.firebaseio.com",
+    "project_id": "e-zsat",
+    "storage_bucket": "e-zsat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986733453212:android:e0316a61bb9a95b6",
+        "android_client_info": {
+          "package_name": "translate.quick.learn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986733453212-ilbr0buob311t1hsb5lg1lhteqah36js.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJVsgcvHmMuSF8vxlbOcgmRt_au4V73O0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986733453212-ilbr0buob311t1hsb5lg1lhteqah36js.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,64 @@
+<ion-grid *ngIf='questions$ | async as questionsArray'>
+<ng-container *ngIf="questionsArray.length; else notEnoughWords">
+  <ion-row>
+    <ion-col size-sm='6' offset-sm='3'>
+      <ion-card>
+        <!-- <img [src]='pl? plFlag : engFlag' /> -->
+        <ion-card-header>
+          <ion-card-title>{{isThatEngWord ? correctAnswer?.eng :correctAnswer?.pl}}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size-sm='8' offset-sm='2'>
+      <ion-card>
+
+        <quiz-single-word [isThatEngWord]='isThatEngWord' [goodAnswerWasPlaced]='goodAnswerWasPlaced'
+                          (placeGoodAnswerEmitter)='handleAnswerPlacing($event)' [correctAnswer]='correctAnswer'
+                          *ngFor='let answer of questionsArray' [answer]='answer'></quiz-single-word>
+        <!-- <ion-item button (click)='placeAnswear(0)' [color]="clear? '' :(correctA ? 'success' : 'danger')"
+          class="activated">
+          <ion-icon name="flame" slot="start"></ion-icon>
+          <ion-label>{{!pl ? qst[0].pl : qst[0].eng}}</ion-label>
+          <ion-card-subtitle *ngIf='!clear'>{{pl ? qst[0].pl : qst[0].eng}}</ion-card-subtitle>
+        </ion-item>
+
+        <ion-item button (click)='placeAnswear(1)' [color]="clear? '' :(correctB ? 'success' : 'danger')">
+          <ion-icon name="flag" slot="start"></ion-icon>
+          <ion-label>{{!pl ? qst[1].pl : qst[1].eng}}</ion-label>
+          <ion-card-subtitle *ngIf='!clear'>{{pl ? qst[1].pl : qst[1].eng}}</ion-card-subtitle>
+        </ion-item>
+
+        <ion-item button (click)='placeAnswear(2)' [color]="clear? '' :(correctC ? 'success' : 'danger')">
+          <ion-icon name="flash" slot="start"></ion-icon>
+          <ion-label>{{!pl ? qst[2].pl : qst[2].eng}}</ion-label>
+          <ion-card-subtitle *ngIf='!clear'>{{pl ? qst[2].pl : qst[2].eng}}</ion-card-subtitle>
+        </ion-item>
+
+        <ion-item button (click)='placeAnswear(3)' [color]="clear? '' :(correctD ? 'success' : 'danger')">
+          <ion-icon name="globe" slot="start"></ion-icon>
+          <ion-label>{{!pl ? qst[3].pl : qst[3].eng}}</ion-label>
+          <ion-card-subtitle *ngIf='!clear'>{{pl ? qst[3].pl : qst[3].eng}}</ion-card-subtitle>
+        </ion-item> -->
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf='goodAnswerWasPlaced'>
+    <ion-col size='4'>
+      <ion-button (click)='nextQuestion("easy")' expand='block' color='primary'>Easy</ion-button>
+    </ion-col>
+    <ion-col size='4'>
+      <ion-button (click)='nextQuestion("hard")' expand='block' color='secondary'>Hard</ion-button>
+    </ion-col>
+    <ion-col size='4'>
+      <ion-button (click)='nextQuestion("medium")' expand='block' color='tertiary'>Medium</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ng-container>
+
+  <ng-template #notEnoughWords>
+    <h1 [style.text-align]="'center'">Not enough {{this.lvl}} words!</h1>
+  </ng-template>
+</ion-grid>

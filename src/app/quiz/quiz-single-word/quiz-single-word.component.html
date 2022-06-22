@@ -1,0 +1,6 @@
+<ion-item button [disabled]='!nullChecker(markedAsBad)' [color]="colorOfItem" class="activated item"
+  (click)='placeAnswerHandler()'>
+  <ion-icon name="flame" slot="start"></ion-icon>
+  <ion-label>{{isThatEngWord ? answer.pl :answer.eng}}</ion-label>
+  <ion-card-subtitle [ngClass]='{"invisible":nullChecker(markedAsBad), "translation-label":(!nullChecker(markedAsBad))}'>{{isThatEngWord ? answer.eng :answer.pl}}</ion-card-subtitle>
+</ion-item>
