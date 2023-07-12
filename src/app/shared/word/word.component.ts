@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { WordAPI } from 'src/app/models/word.model';
+import {Component, Input, OnInit} from '@angular/core';
+import {WordAPI} from 'src/app/models/word.model';
 
 @Component({
   selector: 'word',

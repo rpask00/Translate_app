@@ -1,7 +1,7 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { WordOptionsComponent } from './word-options.component';
+import {WordOptionsComponent} from './word-options.component';
 
 describe('WordOptionsComponent', () => {
   let component: WordOptionsComponent;

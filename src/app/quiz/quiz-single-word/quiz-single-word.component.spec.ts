@@ -1,7 +1,7 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { QuizSingleWordComponent } from './quiz-single-word.component';
+import {QuizSingleWordComponent} from './quiz-single-word.component';
 
 describe('QuizSingleWordComponent', () => {
   let component: QuizSingleWordComponent;

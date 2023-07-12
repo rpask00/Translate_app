@@ -1,12 +1,9 @@
-import {Component, OnInit, ViewChild, ElementRef} from '@angular/core';
-import {AngularFireDatabase, AngularFireList, AngularFireAction, DatabaseSnapshot} from '@angular/fire/database';
-import {environment} from 'src/environments/environment';
-import {Word, WordAPI} from '../models/word.model';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {WordAPI} from '../models/word.model';
 import {DataBaseService} from '../services/data-base.service';
 import {Observable} from 'rxjs';
 import {LoadingController} from '@ionic/angular';
 import {Router} from '@angular/router';
-import {filter} from 'rxjs/operators';
 
 @Component({
     selector: 'app-dictionary',

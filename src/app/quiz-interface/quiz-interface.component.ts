@@ -1,9 +1,8 @@
-import {Component, OnInit, ChangeDetectorRef, Input, OnChanges} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {DataBaseService} from '../services/data-base.service';
-import {Word, WordAPI} from '../models/word.model';
+import {WordAPI} from '../models/word.model';
 import {Observable} from 'rxjs';
-import {SegmentChangeEventDetail} from '@ionic/core';
-import {take, switchMap, map} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 
 @Component({
     selector: 'app-quiz-interface',
@@ -36,6 +35,10 @@ export class QuizInterfaceComponent implements OnInit {
     }
 
     nextQuestion(lvl) {
+        if (this.correctAnswer) {
+            this.dbSrv.changeLevel(this.correctAnswer._id, lvl).subscribe();
+        }
+
         this.questions$ = this.dbSrv.getRandomWords(this.answersCount, this.lvl).pipe(
             map(quests => {
                 this.questions = quests;

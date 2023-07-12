@@ -1,8 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Word, WordAPI } from 'src/app/models/word.model';
-import { DatabaseSnapshot, AngularFireAction } from '@angular/fire/database';
-import { DataBaseService } from 'src/app/services/data-base.service';
-import { IonItemSliding } from '@ionic/angular';
+import {Component, Input, OnInit} from '@angular/core';
+import {WordAPI} from 'src/app/models/word.model';
+// import { DatabaseSnapshot, AngularFireAction } from '@angular/fire/database';
+import {DataBaseService} from 'src/app/services/data-base.service';
+import {IonItemSliding} from '@ionic/angular';
 
 @Component({
   selector: 'word-options',

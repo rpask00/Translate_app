@@ -1,9 +1,9 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { DataBaseService } from '../services/data-base.service';
-import { Word, WordAPI } from '../models/word.model';
-import { Observable } from 'rxjs';
-import { SegmentChangeEventDetail } from '@ionic/core';
-import { take, switchMap } from 'rxjs/operators';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {DataBaseService} from '../services/data-base.service';
+import {WordAPI} from '../models/word.model';
+import {Observable} from 'rxjs';
+import {SegmentChangeEventDetail} from '@ionic/core';
+import {switchMap, take} from 'rxjs/operators';
 
 @Component({
   selector: 'app-quiz',

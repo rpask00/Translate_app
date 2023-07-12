@@ -1,6 +1,6 @@
-import { Component, OnInit, Output, EventEmitter, Input, AfterViewChecked, OnChanges } from '@angular/core';
-import { WordAPI } from 'src/app/models/word.model';
-import { isNullOrUndefined } from 'util';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
+import {WordAPI} from 'src/app/models/word.model';
+import {isNullOrUndefined} from 'util';
 
 @Component({
   selector: 'quiz-single-word',
